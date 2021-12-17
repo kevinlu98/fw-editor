@@ -96,6 +96,10 @@
     height: 100% !important;
 }
 
+#fw-editor-cn.fw-full-screen #write {
+    height: 100% !important;
+}
+
 #fw-editor-cn .fw-tool-bar {
     padding: 10px;
     background-color: #21252B;
