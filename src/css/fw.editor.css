@@ -1,0 +1,111 @@
+#fw-editor-cn .fw-editor-text {
+    resize: none;
+    outline: none;
+    background-color: #282C34;
+    color: #ABB2BF;
+    font-size: 16px;
+    line-height: 22px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    border: none;
+    flex: 0 0 100%;
+}
+
+#fw-editor-cn #write {
+    flex: 1;
+    position: relative;
+    background-color: rebeccapurple;
+}
+
+#fw-editor-cn #write .size-bar {
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    width: 6px;
+    border-radius: 3px;
+    height: 100px;
+    left: 0;
+    transform: translate(-100%, -50%);
+    top: 50%;
+}
+
+#fw-editor-cn #write .size-bar:hover {
+    background-color: rgba(255, 255, 255, .7);
+    cursor: col-resize;
+}
+
+#fw-editor-cn .fw-editor-text::-webkit-scrollbar {
+    width: 15px;
+    background-color: #282C34;
+    border-left: 1px solid #414349;
+}
+
+#fw-editor-cn .fw-editor-text::-webkit-scrollbar-thumb {
+    background: #414349;
+}
+
+#fw-editor-cn.fw-full-screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+
+#fw-editor-cn .fw-editor-content {
+    display: flex;
+}
+
+#fw-editor-cn.fw-full-screen .fw-editor-content {
+    height: 100%;
+}
+
+#fw-editor-cn.fw-full-screen .fw-editor-text {
+    height: 100% !important;
+}
+
+#fw-editor-cn .fw-tool-bar {
+    padding: 10px;
+    background-color: #21252B;
+}
+
+#fw-editor-cn .fw-tool-bar .fw-tool-item {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    line-height: 32px;
+    text-align: center;
+}
+
+#fw-editor-cn .fw-tool-bar .fw-tool-item:hover {
+    background-color: #43454B;
+}
+
+#fw-editor-cn .fw-tool-bar svg {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+#fw-editor-cn .fw-tool-bar .fw-menu-headline {
+    position: relative;
+}
+
+#fw-editor-cn .fw-menu-headlist {
+    position: absolute;
+    list-style: none;
+    background-color: #353B45;
+    color: #fff;
+    padding: 5px 0;
+    top: 20px;
+    left: -12px;
+}
+
+#fw-editor-cn .fw-menu-headlist li {
+    padding: 5px 20px;
+}
+
+#fw-editor-cn .fw-menu-headlist li:hover {
+    background-color: #43454B;
+}
