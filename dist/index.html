@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        html, body {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Title</title><style>html, body {
             margin: 0;
             padding: 0;
         }
@@ -12,17 +6,7 @@
         #test-div {
             margin: 0 auto;
             width: 80%;
-        }
-    </style>
-</head>
-<body>
-<div id="test-div">
-    <textarea id="my-editor"></textarea>
-</div>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-<script src="./dist/fw.editor.js"></script>
-<script>
-    $(function () {
+        }</style><script defer="defer" src="fw.editor.js"></script></head><body><div id="test-div"><textarea id="my-editor"></textarea></div><script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script><script src="./dist/fw.editor.js"></script><script>$(function () {
         // .add()
         let editor = new Freewind.Editor("my-editor", {
             view: true,
@@ -38,7 +22,4 @@
                 return text.replaceAll('1', '2')
             }
         })
-    })
-</script>
-</body>
-</html>
+    })</script></body></html>
