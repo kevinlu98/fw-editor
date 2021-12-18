@@ -184,20 +184,22 @@ export class Editor {
                 let content = `<div class="fw-layer-content">
                 <div class="fw-form-item">
                 <label>链接标题：</label>
-                <input type="text" id="fw-link-input" value="${this.cm.getSelections()[0]}"  placeholder="请输入链接标题">
+                <input type="text" id="fw-link-desc" value="${this.cm.getSelections()[0]}"  placeholder="请输入链接标题">
                 </div>
                 <div class="fw-form-item">
                 <label>链接地址：</label>
-                <input type="text" id="fw-url-input" placeholder="请输入链接地址">
+                <input type="text" id="fw-link-url" placeholder="请输入链接地址">
                 </div></div>
                 `
+
                 let idx = layer.open({
                     type: 1,
                     title: '插入链接',
                     btn: ['确定', '取消'],
                     content: content,
                     btn1: () => {
-                        editorTools.handleLink(this.cm, $("#fw-link-input").val(), $("#fw-url-input").val())
+                        console.log($("#fw-link-desc").val(), $("#fw-link-url").val())
+                        editorTools.handleLink(this.cm, $("#fw-link-desc").val(), $("#fw-link-url").val())
                         layer.close(idx)
                     }
                 })
@@ -209,11 +211,11 @@ export class Editor {
                 let content = `<div class="fw-layer-content">
                 <div class="fw-form-item">
                 <label>图片名称：</label>
-                <input type="text" id="fw-pic-input" value="${this.cm.getSelections()[0]}" placeholder="请输入图片名称...">
+                <input type="text" id="fw-pic-desc" value="${this.cm.getSelections()[0]}" placeholder="请输入图片名称...">
                 </div>
                 <div class="fw-form-item">
                 <label>图片地址：</label>
-                <input type="text" id="fw-url-input" placeholder="请输入图片地址...">
+                <input type="text" id="fw-pic-url" placeholder="请输入图片地址...">
                 </div></div>
                 `
                 let idx = layer.open({
@@ -222,7 +224,7 @@ export class Editor {
                     btn: ['确定', '取消'],
                     content: content,
                     btn1: () => {
-                        editorTools.handleLink(this.cm, $("#fw-pic-input").val(), $("#fw-url-input").val(), true)
+                        editorTools.handleLink(this.cm, $("#fw-pic-desc").val(), $("#fw-pic-url").val(), true)
                         layer.close(idx)
                     }
                 })
@@ -284,7 +286,7 @@ export class Editor {
                 content += '</select></div></div>'
                 let idx = layer.open({
                     type: 1,
-                    title: '插入链接',
+                    title: '插入代码',
                     btn: ['确定', '取消'],
                     content: content,
                     btn1: () => {

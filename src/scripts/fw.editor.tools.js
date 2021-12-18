@@ -293,6 +293,8 @@ function handleTitle(cm, level) {
  * Insert image or normal link
  * 插入图片或普通链接
  * @param {Object} cm codemirror实例
+ * @param tx
+ * @param url
  * @param {Boolean} isPicture 是否为图片链接
  */
 function handleLink(cm, tx = "", url = "", isPicture = false) {
@@ -328,8 +330,8 @@ function handleLink(cm, tx = "", url = "", isPicture = false) {
     } else {
         const cursor = cm.getCursor()
         let {line: curLine, ch: curPos} = cursor
-        let replaceStr = '[]()'
-        curPos += 3
+        let replaceStr = `[${tx}](${url}) `
+        curPos += replaceStr.length - 2
         isPicture && (replaceStr = '!' + replaceStr) && (curPos += 1)
         cm.replaceSelection(replaceStr)
         cm.setCursor({line: curLine, ch: curPos})
