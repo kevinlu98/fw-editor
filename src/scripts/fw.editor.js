@@ -566,6 +566,7 @@ export class Editor {
 
         })
         this.reoladToolBar()
+        this.cm.setSize('auto', this.settings['height'] + 'px')
     }
 
     md2html(watch = false) {
