@@ -1,0 +1,311 @@
+.fw-tool-bar {
+    padding: 10px;
+    position: relative;
+    background-color: #21252B;
+}
+
+.fw-tool-bar.fullScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.fw-tool-bar .fw-tool-item {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.fw-tool-bar .fw-tool-item:hover {
+    background-color: #43454B;
+}
+
+.fw-tool-bar svg {
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+}
+
+.fw-tool-bar .fw-menu-headline {
+    position: relative;
+}
+
+.fw-tool-bar .fw-menu-headlist {
+    z-index: 9999;
+    position: absolute;
+    list-style: none;
+    background-color: #353B45;
+    color: #fff;
+    padding: 5px 0;
+    top: 20px;
+    left: -12px;
+}
+
+.fw-tool-bar .fw-menu-headlist li {
+    padding: 5px 20px;
+}
+
+.fw-tool-bar .fw-menu-headlist li:hover {
+    background-color: #43454B;
+}
+
+.fw-tool-bar #write {
+    position: absolute;
+    background-color: #ffffff;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    transform: translateY(100%);
+    z-index: 9999;
+    display: none;
+}
+
+.CodeMirror.CodeMirror-fullscreen {
+    top: 52px;
+}
+
+.fw-layer-content {
+    padding: 0 20px;
+}
+
+.fw-layer-content .fw-form-item {
+    margin: 10px 0;
+    color: #777;
+    font-size: 12px;
+}
+
+.fw-layer-content .fw-form-item select,
+.fw-layer-content .fw-form-item input {
+    outline: none;
+    border: 1px solid #EAEEF3;
+    padding: 5px;
+}
+
+
+#write {
+    font-size: 14px !important;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+    white-space: normal;
+    overflow-wrap: break-word;
+    color: rgb(96, 98, 102);
+    -webkit-font-smoothing: antialiased;
+    padding: 20px;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    color: #303133;
+    font-size: 18px;
+    font-weight: 100;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+#write h1::before,
+#write h2::before,
+#write h3::before,
+#write h4::before,
+#write h5::before,
+#write h6::before {
+    position: absolute;
+    background-color: #50bfff;
+    font-size: 22px;
+    top: 0;
+    left: 0;
+}
+
+#write h1::before {
+    content: "¶";
+    font-weight: normal;
+    color: #50bfff;
+    left: -5px;
+    background-color: transparent;
+}
+
+#write h2::before {
+    content: ' ';
+    height: 30px;
+    width: 4px;
+    /*left: 5px;*/
+    border-radius: 2px;
+}
+
+#write h3::before {
+    content: '';
+    width: 4px;
+    height: 30px;
+    /*left: 5px;*/
+    border-radius: 0 4px 4px 0;
+    font-size: 20px;
+}
+
+
+#write h4,
+#write h5,
+#write h6 {
+    padding-left: 0;
+}
+
+#write h4::before,
+#write h5::before,
+#write h6::before {
+    color: #50bfff;
+    /*margin-left: 5px;*/
+    font-size: 18px;
+    font-weight: normal;
+    background-color: transparent;
+    position: relative;
+    margin-right: 5px;
+}
+
+#write h4::after,
+#write h5::after,
+#write h6::after {
+    color: #50bfff;
+    font-weight: normal;
+    background-color: transparent;
+    position: relative;
+    margin-left: 5px;
+}
+
+#write h4::before {
+    content: 'ß';
+}
+
+#write h4::after {
+    content: 'ß';
+}
+
+
+#write h5::before {
+    content: "ç";
+}
+
+#write h5::after {
+    content: "ç";
+}
+
+
+#write h6::before {
+    content: "∫";
+}
+
+#write h6::after {
+    content: "∫";
+}
+
+#write li {
+    line-height: 30px;
+}
+
+#write p {
+    margin: 0 0 15px;
+    line-height: 30px;
+}
+
+
+#write p > code {
+    color: #50bfff;
+    display: inline-block;
+    padding: 0 5px;
+    background-color: #ecf8ff;
+    border-radius: 3px;
+}
+
+#write hr {
+    border: none;
+    height: 1px;
+    background-color: #e4e7ed;
+    margin: 0 0 15px;
+}
+
+#write blockquote > p {
+    margin: 0;
+}
+
+
+#write blockquote {
+    color: #50bfff;
+    background-color: #ecf8ff;
+    border-left: 5px solid #50bfff;
+    padding: 7px 15px;
+    margin: 0 0 15px;
+    font-size: 14px;
+}
+
+#write a {
+    color: #409eff;
+    /*text-decoration: none;*/
+}
+
+#write a[href^='http']::after {
+    content: "\f1d9";
+    font: normal normal normal 14px/1 FontAwesome;
+    padding-left: 5px;
+}
+
+#write img {
+    max-width: 100%;
+    border-radius: 4px;
+    transition: transform .35s, box-shadow .35s;
+}
+
+#write table {
+    max-width: 100%;
+    table-layout: fixed;
+    color: #909399;
+    margin-bottom: 15px;
+    font-size: 13px;
+    border-top: 1px solid #ebeef5;
+    border-left: 1px solid #ebeef5;
+    border-collapse: collapse;
+}
+
+#write table thead th {
+    font-weight: 500;
+    background: #ebeef5;
+    padding: 8px;
+    min-width: 100px;
+    text-align: center;
+    border-bottom: 1px solid #ebeef5;
+    border-right: 1px solid #ebeef5;
+}
+
+#write table tbody td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ebeef5;
+    border-right: 1px solid #ebeef5;
+
+}
+
+#write {
+    box-sizing: border-box;
+    border-right: 1px solid #292D3E;
+    border-bottom: 1px solid #292D3E;
+}
+
+#write ol,
+#write ul {
+    padding-left: 20px;
+}
+
+
+/* end */
+
+
+#write img:hover {
+    cursor: pointer;
+}

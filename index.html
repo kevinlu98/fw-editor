@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        #test-div {
+            width: 80%;
+            height: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div id="test-div">
+    <textarea class="form-control" id="code" name="code"></textarea>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="dist/fw.editor.js"></script>
+<script>
+    $(function () {
+        let editor = new Freewind.Editor("code")
+    })
+</script>
+</body>
+</html>
