@@ -25,17 +25,6 @@ module.exports = (env, argv) => ({
                 }
             },
             {
-                test: /\.(gif|png|jpg|woff|svg|ttf|eot)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        limit: 500,
-                        outputPath: 'images/',
-                        name: '[name].[ext]'
-                    }
-                }]
-            },
-            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
             }
