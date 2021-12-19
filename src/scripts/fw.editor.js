@@ -575,7 +575,7 @@ export class Editor {
             this.lastmd = md
             let ht = marked.parse(md)
             if (this.settings['parse']) {
-                ht = options.parse(ht)
+                ht = this.settings.parse(ht)
             }
             if (watch || (ht !== this.viewer.html() && this.watch)) {
                 this.viewer.html(ht)
